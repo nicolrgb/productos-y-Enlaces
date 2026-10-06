@@ -1,0 +1,229 @@
+<!DOCTYPEhtml>
+<HTML Lang="es">
+<head>
+ <meta charset="UTF-8"
+
+<title>Actividad2:Catalogo y contacto
+comercial</title>
+ 
+<style>
+
+body {
+
+font-family: Arial,sans-serif;
+background-color:#f4f4f9;
+padding: 30px;
+
+}
+.caja-actividad {
+ max-width: 700px;
+ margin: 0 aurto;
+ background: White; 
+ padding: 25px;
+border-radius: 8px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+}
+
+.codigo-bloque{
+background: #23272e;
+color:#abb2bf;
+padding:20pxL;
+
+font-famuily:monospace;
+white-space:pre;
+font-size:15px;
+line-height:1.8;
+
+}
+
+.espacio {
+ background:#3e4451;
+ color:white;
+ border:2px dashed #61afef;
+ border-radius:4px;
+ ´padding:2px 5px;
+ text-aling:center;
+ font-weight:bold;
+
+}
+/*colores dinamicos*/
+.bien {background-color:#28a745!important;
+border:2px solid #1e7e34!important;}
+
+.mal{background-color:#dc3545!important;
+border:2px solid #bd213o!important;}
+
+.banco{
+background:#e8f4fd;
+padding:15px;
+border-radius: 6px;
+margin: 20px 0;
+text-align:center;
+font-weight: bold;
+
+}
+.btn {
+ width: 100%; 
+ background:#28a745;
+ color: White;
+ padding: 12px;
+ border: none;
+ font-size: 16px;
+ font-weihgt: bold;
+ border-radius: 5px;
+ cursor:pointer;
+
+}
+
+.pistas {
+margin-top: 15px;
+color:#721c24;
+background:#8d7da;
+padding: 10px 20pxs;
+border-radius: 5px;
+display: none;
+
+}
+</style>
+</head>
+<body>
+
+
+<div class="caja-actividad">
+ <h2> Ejercicio 2: Catalogo de productos y 
+  Enlaces</h2>
+
+ <p>Completa el código para mostrar la imagen del 
+ producto,su descripción y un enlace a redes
+ socialdes.</p>
+
+
+<!--BANCO DE PALABRAS-->
+
+<div class="banco">
+
+palabras disponibles: img |p|ul|li|a
+
+</div>
+
+
+<!--CODIGO PARA COMPLETAR-->
+<div class="codigo-bloque">&lt;main&gt;
+&lt;section id="producto"&gt;
+ &lt;lt!--ERROR 1:Falta la etiqueta para mostar la
+ foto del producto --&gt;
+
+&lt;!--ERROR 2: Falta la etiqueta para el párrafo
+ descriptivo --&gt;
+
+&lt;<input type="test" id="ex2"class="espacio"
+style="width:50PX;">&gt;Zapatos comodos para correr
+todos los días.&it;/p&gt;
+
+&lt;/section&gt;
+
+&lt;section id=" contacto"&gt;
+
+ &lt;h3&gt;siguenos&lt;/h3&gt;
+ &lt;!--ERROR 3: falta la etiqueta para abrir la lista
+ desordenada--&gt;
+
+ &lt;<input type="text" id="ex3" class="espaqcio"
+style="width: 50px;">&gt;
+
+&lt;!--ERROR 4: falta el elemento de lista --&gt;
+
+ &lt;<input type="text"id="ex4" class="espacio"
+style="widh: 50px;">&gt;
+ 
+  &lt;!--ERROR 5:falta la etiqueta de enlace o hipervínculo --&gt;
+
+&lt;<input type="text"id="ex5"class="espacio"
+style="widh: 50px;">
+href="https://instagram.com"&gt;Instagram&lt;/a&gt;
+
+	&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/section&gt;
+	&lt;/main&gt;</div>
+ 
+ 	<button class="btn"
+	onclick="evaluarEjercicio2()">Comprobar
+	RespuestaS</button>
+  	
+	<div id ="ayuda2"class="pistas"></div>
+
+ </div>
+
+
+<script>
+	function evaluarEjercicio2(){
+	const respuestas={
+
+	ex1:{v."img",p:.Para mostrar imágenes en la
+       web se usa la etiqueta <img>."}
+
+	ex2:{v:"p",p:".Los bloques de texto o 
+      descripciones utilizan la etiqueta de párrafo <p>."},
+
+	ex3:{v:"ul",p:.Una lista con viñetas 
+      (desordena) se abre con la etiqueta <ul>."},
+    
+     ex4:{v:"li",p:".Cada item o elemento dentro
+   de una lista debe usar la etiqueta <li>."}.
+
+      ex5:{v:"a",p:".Para crear enlaces e hipervínculos a otras
+      paginas se usa la etiqueta <a>."}
+	
+	};
+
+	let mensajes=;
+
+
+	for(let id in respuestas){
+	  let input=document.getElementByld(id);
+	  let txt=input.value.trim().toLowerCase();
+
+         if (txt===respuestas[id].v){
+	   inpunt.className="espacio bien";
+
+    }else{
+    	input.className="espacio mal";
+	mensajes.push(respuestas[id.p);
+
+   }
+}
+
+
+let cajaAyuda=
+document.getElenmentByld("ayuda2");
+
+if(mensajes.length > 0){
+cajaAyuda.innerHTML="<strong>Necesitas
+revisar:</strong><br>";
+
+   cajaAyuda.style.background=#8d7da";
+   cajaAyuda.style.color=#721c24;
+    cajaAyuda.style.display="block";
+
+}else{
+
+   cajaAyuda.innerHTML=¡Excelente! Has
+  completado el catalogo y la sección de conctato
+  correctamente";
+
+cajaAyuda.style.background=#d4edda";
+   cajaAyuda.style.color=#155724";
+    cajaAyuda.style.display="block";
+
+}
+
+}
+
+</script>
+
+
+</body>
+
+</html> 
